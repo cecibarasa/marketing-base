@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="40" viewBox="0 0 160 40" fill="none">
+  <!-- Transparent background logo; text uses accent color variable fallback -->
+  <g>
+    <text x="8" y="26" font-family="Poppins, sans-serif" font-size="16" font-weight="700" fill="#ff7a59">Nimo</text>
+    <text x="68" y="26" font-family="Poppins, sans-serif" font-size="16" font-weight="700" fill="#101010">Digital</text>
+  </g>
+</svg>

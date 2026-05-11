@@ -1,0 +1,499 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h2 class="hero-title">Game-Changing Tools <br> for Social Marketing <br> Success</h2>
+                    <p class="hero-subtitle">Your success is our priority. Explore our services and learn how we can help you grow your business.</p>
+                    <button class="btn btn-primary btn-lg">About Nimo</button>
+                </div>
+                <div class="hero-center">
+                    <div class="words-wrapper">
+                        <b id="rotating-text"></b>
+                    </div>
+                    {% comment %} <div class="hero-main-media">
+                        <img src="{% static 'images/h2-img-1.webp' %}" alt="Hero Image" class="hero-image" />
+                    </div> {% endcomment %}
+                </div>
+                <div class="hero-right">
+                    <video src="http://themexriver.com/wp/nimo/plybtn-video-1.mp4" alt="Marketing Video" autoplay muted loop></video>
+                        {% comment %} <div class="hero-thumb">
+                            <img src="{% static 'images/p2-img-1.webp' %}" alt="thumb" />
+                        </div> {% endcomment %}
+                </div>
+            </div>
+                <div class="hero-decor">
+                    <!-- decorative shapes could go here as absolutely positioned images -->
+                    <img src="{% static 'images/shape-1.svg' %}" class="shape-1" aria-hidden="true" />
+                    <img src="{% static 'images/shape-2.svg' %}" class="shape-2" aria-hidden="true" />
+                </div>
+                <nav class="floating-navbar" aria-label="Primary">
+                    <div class="floating-inner">
+                        <div class="floating-logo"> <img src="{% static 'images/a2-logo-favicon.webp' %}" alt="logo"> </div>
+                        <ul class="floating-menu">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                        <a class="floating-cta" href="#contact">Contact Us</a>
+                    </div>
+                </nav>
+        </div>
+    </section>
+    <section class="marquee-section">
+        <div class="marquee-text">Welcome to our Marketing Site! Stay tuned for the latest updates and offers.</div>
+    </section>
+    <section id="about" class="about-us">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="{% static 'images/p2-img-1.webp' %}" alt="About our marketing team" />
+                    <marquee class="testimonials-marquee" behavior="scroll" direction="left" scrollamount="3">
+                        <div class="testimonial-item">
+                            <p class="testimonial-text">"Nimo transformed our social media presence and boosted our sales by 150%!"</p>
+                            <div class="testimonial-author">— Happy Client, Tech Startup</div>
+                        </div>
+                        <div class="testimonial-item">
+                            <p class="testimonial-text">"Their team is creative, responsive, and delivers results consistently."</p>
+                            <div class="testimonial-author">— Satisfied Customer, E-commerce Store</div>
+                        </div>
+                        <div class="testimonial-item">
+                            <p class="testimonial-text">"We saw a significant increase in engagement and conversions within 3 months."</p>
+                            <div class="testimonial-author">— Business Owner, Marketing Agency</div>
+                        </div>
+                        <div class="testimonial-item">
+                            <p class="testimonial-text">"Nimo's strategy and execution exceeded our expectations by far."</p>
+                            <div class="testimonial-author">— Brand Manager, Fashion Brand</div>
+                        </div>
+                    </marquee>
+                </div>
+                {% comment %} <div class="section-heading">
+                    <span class="section-label">About Us</span>
+                    <h2 class="section-title">We help brands grow with smarter digital marketing</h2>
+                    <p class="section-description">At Nimo, we combine strategy, design, and technology to deliver campaigns that reach the right people and convert them into customers.</p>
+                </div> {% endcomment %}
+                <div class="about-copy">
+                    <span class="section-label">01. About us</span>
+                    <h2 class="section-title">Nimo Digital is a creative driven digital marketing agency.</h2>
+                    <p class="section-description">Trusted by the biggest brand worldwide</p>
+                    <p>We are a full-service digital marketing team focused on social strategy, web experience, and creative storytelling. Our work is driven by performance, clarity, and growth.</p>
+                    <ul class="about-list">
+                        <li>Data-backed social media campaigns</li>
+                        <li>Custom website design with conversion focus</li>
+                        <li>Brand storytelling that builds trust</li>
+                    </ul>
+                    {% comment %} <a href="#contact" class="btn btn-primary">Talk to Us</a> {% endcomment %}
+                    <h5>Trusted by the biggest brands worldwide</h5>
+                    <div class="logo-section">
+                        <marquee behavior="scroll" direction="left" scrollamount="3">
+                            <div class="logo-track">
+                                <img src="{% static 'images/logo-1.svg' %}" alt="TechNova" class="brand-logo" />
+                                <img src="{% static 'images/logo-2.svg' %}" alt="FashionHub" class="brand-logo" />
+                                <img src="{% static 'images/logo-3.svg' %}" alt="EcoGreen" class="brand-logo" />
+                                <img src="{% static 'images/logo-4.svg' %}" alt="HealthPlus" class="brand-logo" />
+                                <img src="{% static 'images/logo-5.svg' %}" alt="TravelWorld" class="brand-logo" />
+                                <img src="{% static 'images/logo-6.svg' %}" alt="FoodieDelight" class="brand-logo" />
+                            </div>
+                        </marquee>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="services">
+        <div class="container">
+            <div class="services-header">
+                <span class="section-label">02. Services</span>
+                <h2 class="section-title">Nimo offer a full suite of digital services</h2>
+            </div>
+            <div class="services-content">
+                <div class="service-item">
+                    <div class="service-number">1.</div>
+                    <div class="service-details">
+                        <h3 class="service-title">Social Media Marketing</h3>
+                        <p class="service-description">We help brands grow, engage, and convert audiences across all major social platforms through strategic content.</p>
+                        <ul class="service-features">
+                            <li>Social Media Strategy Development</li>
+                            <li>Trend & Hashtag Research</li>
+                            <li>Platform Management</li>
+                            <li>Performance Monitoring & Reporting</li>
+                        </ul>
+                        <a href="#contact" class="service-link">Read More</a>
+                    </div>
+                    <div class="service-image">
+                        <img src="{% static 'images/s2-img-1.webp' %}" alt="Social Media Marketing" />
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-number">2.</div>
+                    <div class="service-details">
+                        <h3 class="service-title">Paid Advertising (PPC)</h3>
+                        <p class="service-description">We create data-driven ad campaigns that attract the right audience, increase conversions, and maximize return on investment across multiple platforms.</p>
+                        <ul class="service-features">
+                            <li>Facebook & Instagram Ads setup</li>
+                            <li>Google Ads (Search, Display, YouTube)</li>
+                            <li>LinkedIn & TikTok Ads</li>
+                            <li>Retargeting campaigns</li>
+                        </ul>
+                        <a href="#contact" class="service-link">Read More</a>
+                    </div>
+                    <div class="service-image">
+                        <img src="{% static 'images/s2-img-2.webp' %}" alt="Paid Advertising" />
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-number">3.</div>
+                    <div class="service-details">
+                        <h3 class="service-title">Content Creation & Branding</h3>
+                        <p class="service-description">We craft visually engaging content and cohesive brand identities that tell your story.</p>
+                        <ul class="service-features">
+                            <li>Graphic Design for Social Media & Ads</li>
+                            <li>Short-Form Video Production</li>
+                            <li>Logo & Visual Identity Design</li>
+                        </ul>
+                        <a href="#contact" class="service-link">Read More</a>
+                    </div>
+                    <div class="service-image">
+                        <img src="{% static 'images/s2-img-3.webp' %}" alt="Content Creation & Branding" />
+                    </div>
+                </div>
+            </div>
+            <div class="services-cta">
+                <h3>Have a project? We're ready to help.</h3>
+                <a href="#contact" class="btn btn-primary">Let's Get Started</a>
+            </div>
+    <section id="why-choose-us" class="why-choose-us">
+        <div class="container">
+            <div class="why-choose-header">
+                <span class="section-label">03. Why Choose Us?</span>
+                <h2 class="section-title">We combine creative storytelling strategy</h2>
+            </div>
+            <div class="why-choose-content">
+                <div class="why-choose-text">
+                    <p>At Nimo, we believe that great marketing goes beyond just numbers and analytics. We combine data-driven strategies with creative storytelling to create campaigns that not only drive results but also build lasting connections with your audience.</p>
+                    <p>Our team of digital marketing experts brings together creativity, technology, and strategic thinking to deliver comprehensive solutions that grow your business and strengthen your brand presence.</p>
+                    <div class="why-choose-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Client Satisfaction</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Team Members</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Support Available</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-choose-image">
+                    <img src="{% static 'images/a2-img-1.webp' %}" alt="Why Choose Nimo" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="portfolio-header">
+                <span class="section-label">04. Portfolio</span>
+                <h2 class="section-title">We've partnered with brands across industries</h2>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="{% static 'images/p2-img-1.webp' %}" alt="Glow Skin Naturals" />
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Glow Skin Naturals</h3>
+                                <p>Increase Instagram engagement and drive traffic to website.</p>
+                                <a href="#" class="portfolio-link">View Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="{% static 'images/p2-img-2.webp' %}" alt="Vibe Clothing Co." />
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Vibe Clothing Co.</h3>
+                                <p>Drive sales during seasonal collection launch</p>
+                                <a href="#" class="portfolio-link">View Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="{% static 'images/p2-img-3.webp' %}" alt="FinVista Consulting" />
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>FinVista Consulting</h3>
+                                <p>Build professional brand presence online.</p>
+                                <a href="#" class="portfolio-link">View Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="process" class="process">
+        <div class="container">
+            <div class="process-header">
+                <span class="section-label">05. Process</span>
+                <h2 class="section-title">The Steps</h2>
+                <p class="process-subtitle">Our Three-Step Process ensures every project is strategic, creative, and results driven — from planning to execution and ongoing optimization.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Strategy & Planning</h3>
+                        <p>We start by understanding your business goals, target audience, and current challenges. Our team conducts thorough research and develops a comprehensive strategy tailored to your needs.</p>
+                        <ul class="step-features">
+                            <li>Market research & analysis</li>
+                            <li>Competitor analysis</li>
+                            <li>Goal setting & KPIs</li>
+                            <li>Strategy development</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Design & Execution</h3>
+                        <p>With strategy in place, we bring your vision to life through creative design and flawless execution. Our experts work across all channels to deliver consistent, high-quality results.</p>
+                        <ul class="step-features">
+                            <li>Creative concept development</li>
+                            <li>Content creation</li>
+                            <li>Campaign implementation</li>
+                            <li>Cross-platform integration</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Analysis & Optimization</h3>
+                        <p>We continuously monitor performance, analyze results, and optimize campaigns for maximum ROI. Regular reporting keeps you informed of progress and achievements.</p>
+                        <ul class="step-features">
+                            <li>Performance tracking</li>
+                            <li>Data analysis & insights</li>
+                            <li>A/B testing & optimization</li>
+                            <li>Monthly reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="process-cta">
+                <h3>We follow</h3>
+                <a href="#contact" class="btn btn-primary">Let's Get Start</a>
+            </div>
+        </div>
+    </section>    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="testimonials-header">
+                <span class="section-label">06. Testimonials</span>
+                <h2 class="section-title">The best reviews from Clients</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-number">4.9</span>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"From start to finish, the communication was seamless and the design blew us away. They really know how to bring a brand to life!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="{% static 'images/t1-author-1.webp' %}" alt="Client" class="author-avatar" />
+                        <div class="author-info">
+                            <h4>Jamia R.</h4>
+                            <span>Startup Founder</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-number">4.9</span>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Most of our clients are satisfied: Share your review"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="{% static 'images/t1-author-2.webp' %}" alt="Client" class="author-avatar" />
+                        <div class="author-info">
+                            <h4>Monder Rivo</h4>
+                            <span>Business Owner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-number">4.9</span>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Nimo boosted our online sales within weeks. Truly impressive!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="{% static 'images/t1-author-3.webp' %}" alt="Client" class="author-avatar" />
+                        <div class="author-info">
+                            <h4>John Rando</h4>
+                            <span>Marketing Director</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-header">
+                <span class="section-label">08. Contact us</span>
+                <h2 class="section-title">Want to work with us? Let's connect</h2>
+                <p class="section-subtitle">Ready to take your digital marketing to the next level? Get in touch with us today.</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Us</h3>
+                            <p>hello@nimo.com</p>
+                            <p>support@nimo.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p>+1 (555) 123-4567</p>
+                            <p>+1 (555) 987-6543</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Visit Us</h3>
+                            <p>123 Marketing Street<br>San Francisco, CA 94105</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Business Hours</h3>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM<br>Sat - Sun: Closed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form action="#" method="post">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="phone" placeholder="Phone Number">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Nimo</h3>
+                    <p>Transforming businesses through innovative digital marketing solutions.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Digital Strategy</a></li>
+                            <li><a href="#services">Social Media Marketing</a></li>
+                            <li><a href="#services">SEO Optimization</a></li>
+                            <li><a href="#services">Content Marketing</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Case Studies</a></li>
+                            <li><a href="#">Whitepapers</a></li>
+                            <li><a href="#">Webinars</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nimo. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+{% endblock %}

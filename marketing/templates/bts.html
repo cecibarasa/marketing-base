@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="bts-section">
+    <div class="container">
+        <h1 class="bts-title">Behind The Scenes - Shoots</h1>
+        <p class="bts-intro">Get an exclusive look at our creative process and the magic behind our photo and video shoots.</p>
+
+        <div class="bts-gallery">
+            <div class="bts-item">
+                <div class="bts-video-placeholder" id="video-1">
+                    <div class="video-canvas">
+                        <div class="camera-movement"></div>
+                        <div class="lighting-effect"></div>
+                        <div class="crew-member crew-1"></div>
+                        <div class="crew-member crew-2"></div>
+                        <div class="equipment camera"></div>
+                        <div class="equipment lights"></div>
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="video-controls">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-1"></div>
+                        </div>
+                        <div class="control-buttons">
+                            <button class="play-pause" onclick="toggleVideo(1)">⏸</button>
+                            <span class="time">0:00 / 0:15</span>
+                        </div>
+                    </div>
+                </div>
+                <h3>Campaign Preparation</h3>
+                <p>Behind the scenes of our latest marketing campaign shoot.</p>
+            </div>
+            <div class="bts-item">
+                <div class="bts-video-placeholder" id="video-2">
+                    <div class="video-canvas">
+                        <div class="camera-movement"></div>
+                        <div class="lighting-effect"></div>
+                        <div class="crew-member crew-3"></div>
+                        <div class="crew-member crew-4"></div>
+                        <div class="equipment tripod"></div>
+                        <div class="equipment reflector"></div>
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="video-controls">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-2"></div>
+                        </div>
+                        <div class="control-buttons">
+                            <button class="play-pause" onclick="toggleVideo(2)">⏸</button>
+                            <span class="time">0:00 / 0:12</span>
+                        </div>
+                    </div>
+                </div>
+                <h3>Creative Team at Work</h3>
+                <p>Our team collaborating to bring ideas to life.</p>
+            </div>
+            <div class="bts-item">
+                <div class="bts-video-placeholder" id="video-3">
+                    <div class="video-canvas">
+                        <div class="camera-movement"></div>
+                        <div class="lighting-effect"></div>
+                        <div class="crew-member crew-5"></div>
+                        <div class="equipment light-stand"></div>
+                        <div class="equipment cables"></div>
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="video-controls">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-3"></div>
+                        </div>
+                        <div class="control-buttons">
+                            <button class="play-pause" onclick="toggleVideo(3)">⏸</button>
+                            <span class="time">0:00 / 0:18</span>
+                        </div>
+                    </div>
+                </div>
+                <h3>Lighting Setup</h3>
+                <p>The technical side of setting up perfect lighting for shoots.</p>
+            </div>
+            <div class="bts-item">
+                <div class="bts-video-placeholder" id="video-4">
+                    <div class="video-canvas">
+                        <div class="camera-movement"></div>
+                        <div class="lighting-effect"></div>
+                        <div class="crew-member crew-6"></div>
+                        <div class="crew-member crew-7"></div>
+                        <div class="equipment monitor"></div>
+                        <div class="equipment laptop"></div>
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="video-controls">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-4"></div>
+                        </div>
+                        <div class="control-buttons">
+                            <button class="play-pause" onclick="toggleVideo(4)">⏸</button>
+                            <span class="time">0:00 / 0:20</span>
+                        </div>
+                    </div>
+                </div>
+                <h3>Post-Production</h3>
+                <p>Editing and refining the final product.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+let videoStates = [false, false, false, false];
+let videoIntervals = [null, null, null, null];
+let videoProgress = [0, 0, 0, 0];
+let videoDurations = [15, 12, 18, 20]; // seconds
+
+function toggleVideo(videoId) {
+    const index = videoId - 1;
+    const videoElement = document.getElementById(`video-${videoId}`);
+    const progressFill = document.getElementById(`progress-${videoId}`);
+    const playPauseBtn = videoElement.querySelector('.play-pause');
+    const playBtn = videoElement.querySelector('.play-button');
+
+    if (videoStates[index]) {
+        // Pause
+        videoStates[index] = false;
+        clearInterval(videoIntervals[index]);
+        playPauseBtn.textContent = '▶';
+        playBtn.style.opacity = '1';
+        videoElement.classList.remove('playing');
+    } else {
+        // Play
+        videoStates[index] = true;
+        playPauseBtn.textContent = '⏸';
+        playBtn.style.opacity = '0';
+        videoElement.classList.add('playing');
+
+        videoIntervals[index] = setInterval(() => {
+            videoProgress[index] += 0.1;
+            if (videoProgress[index] >= videoDurations[index]) {
+                videoProgress[index] = 0;
+            }
+            const progressPercent = (videoProgress[index] / videoDurations[index]) * 100;
+            progressFill.style.width = progressPercent + '%';
+
+            // Update time display
+            const currentTime = Math.floor(videoProgress[index]);
+            const duration = videoDurations[index];
+            const timeElement = videoElement.querySelector('.time');
+            timeElement.textContent = `${Math.floor(currentTime/60)}:${(currentTime%60).toString().padStart(2,'0')} / 0:${duration}`;
+        }, 100);
+    }
+}
+
+// Auto-play first video on load
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => toggleVideo(1), 1000);
+});
+</script>
+{% endblock %}
