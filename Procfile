@@ -1,1 +1,1 @@
-web: gunicorn digital.wsgi:application
+gunicorn digital.wsgi:application
